@@ -1,0 +1,20 @@
+<div class="content">
+        <h1>Comments #{{place}}</h1>
+        <ul class='list-group '>
+                <li ng-repeat="comment in taskList[index].description track by $index" class='list-group-item borderless' id='last'>
+                    <div class="row">
+                            <div class='col-sm-4 square' ng-class='{"blueSquare": comment == activeCom}' ></div>
+                            <div class='col-sm-8 hoverTag'id='sizeLi' ng-click='goActiveCom(comment,$index)' >{{comment}}</div>
+                    </div>
+                </li>
+        </ul>
+        <div class="list-group">
+            <div class="list-group-item borderless">
+                <div class="row">           
+                    <div class='col-sm-4 square' style='margin-right:12px;'></div>
+                    <textarea   type="text" ng-model='newComment' ng-keypress="myFunct($event)">                
+                </div>
+            </div>
+        </div>
+</div>
+
